@@ -3,13 +3,15 @@
 //Given a string, write a function to check if its a permutation of a palindromw
 //A palindrome is the same word forwards/backwards, a permutation is rearragement of letters. 
 
-//approach: if there is an even count of each letter, its a permutation of a palindrome. 
+//approach: if there is an even count of each letter, except for one allowed
+// odd count (abbba, aba) its a permutation of a palindrome. 
 
 function isPermPal(str1){
 
     let letters = {};
     let str = str1.toLowerCase()
 
+    //map count of each letter onto letters object
     for(let i=0; i<str.length; i++){
         if(str[i] !== ' '){
             if(letters[str[i]]){
@@ -19,11 +21,10 @@ function isPermPal(str1){
             }
         }
     }
-    console.log("letters", letters)
 
     let vals = Object.values(letters);
-    console.log("vals", vals);
     let foundOdd = 0; 
+    //only returns true if there is one or less odd count for a letter
     vals.forEach(element => {
         if (element % 2 === 1 ){
             foundOdd++;

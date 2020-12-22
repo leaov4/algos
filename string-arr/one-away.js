@@ -18,7 +18,6 @@ function oneEdit(str1, str2){
     } else if (str1.length > str2.length) {
         val = insert(str2, str1)
     }
-    console.log(val); 
 }
 
 function replace(str1, str2){
