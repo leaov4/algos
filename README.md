@@ -1,3 +1,3 @@
 # algos
 
-JavaScript solutions to CTCI problems.
+JavaScript solutions to CTCI problems (and other problems)
